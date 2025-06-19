@@ -3,11 +3,11 @@ const { parse } = require('csv-parse/sync'); // 同期的なCSVパーサー
 const { RandomForestRegression } = require('ml-random-forest'); // RandomForestRegression をインポート
 
 // --- 設定項目 ---
-const CSV_FILE_PATH = 'top10_combined_df.csv';             // ★入力CSVファイルへのパス
-const MODEL_SAVE_PATH = 'top10_rf_alm_model.json';        // ★保存するモデルファイル名
+const CSV_FILE_PATH = 'top7_combined_df.csv';             // ★入力CSVファイルへのパス
+const MODEL_SAVE_PATH = 'top7_rf_alm_model.json';        // ★保存するモデルファイル名
 const TARGET_COLUMN = 'ALM';                        // ★目的変数のカラム名
-const START_FEATURE_COLUMN = 'Weight';                 // ★説明変数の開始カラム名
-const END_FEATURE_COLUMN = 'Pancreatic amylase';                   // ★説明変数の終了カラム名
+const START_FEATURE_COLUMN = 'Sex';                 // ★説明変数の開始カラム名
+const END_FEATURE_COLUMN = 'LDH';                   // ★説明変数の終了カラム名
 
 /**
  * CSVファイルを読み込み、指定された特徴量と目的変数を抽出・前処理する関数
